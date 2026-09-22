@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Details - EdoState Jobs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">EdoState<span>Jobs</span></div>
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links" id="mainNavLinks">
+        <a href="home.html">Home</a>
+        <a href="index.html">Find Jobs</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="admin-login.html" class="admin-icon-link" title="Admin Login"
+          ><i class="fas fa-user-cog"></i
+        ></a>
+      </nav>
+    </header>
+
+    <div class="breadcrumb-container">
+      <a href="index.html" class="back-link"
+        ><i class="fas fa-arrow-left"></i> Back to All Jobs</a
+      >
+    </div>
+
+    <main class="main-content" id="jobContent" style="display: none">
+      <section class="job-detail-header">
+        <div class="header-info">
+          <span class="job-badge" id="detailType">Internship</span>
+          <h1 id="detailTitle">Loading...</h1>
+          <p class="company">
+            <i class="fas fa-building"></i> <span id="detailCompany">...</span>
+          </p>
+          <div class="meta-info">
+            <span
+              ><i class="fas fa-map-marker-alt"></i>
+              <span id="detailLocation">...</span></span
+            >
+            <span
+              ><i class="fas fa-clock"></i> Deadline:
+              <span id="detailDeadline">...</span></span
+            >
+          </div>
+        </div>
+        <div class="header-action">
+          <a href="#" id="btnApplyHeader" class="btn-apply-large">Apply Now</a>
+        </div>
+      </section>
+
+      <div class="detail-layout">
+        <article class="detail-main">
+          <section class="detail-section">
+            <h2>Job Description</h2>
+            <p id="detailDescription">Loading...</p>
+          </section>
+          <section class="detail-section">
+            <h2>Key Responsibilities</h2>
+            <ul id="detailResponsibilities"></ul>
+          </section>
+          <section class="detail-section">
+            <h2>Requirements & Qualifications</h2>
+            <ul id="detailRequirements"></ul>
+          </section>
+        </article>
+
+        <aside class="detail-sidebar">
+          <div class="sidebar-card">
+            <h3>Job Summary</h3>
+            <hr />
+            <p><strong>Posted:</strong> <span id="detailPosted">...</span></p>
+            <p>
+              <strong>Category:</strong> <span id="detailCategory">...</span>
+            </p>
+            <p>
+              <strong>Duration:</strong> <span id="detailDuration">...</span>
+            </p>
+            <p><strong>Stipend:</strong> <span id="detailStipend">...</span></p>
+            <a href="#" id="btnApplySidebar" class="btn-apply-full"
+              >Apply For This Position</a
+            >
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <div
+      id="errorContent"
+      class="no-results"
+      style="display: none; margin-top: 50px"
+    >
+      <i class="fas fa-exclamation-triangle"></i>
+      <h3>Job Not Found</h3>
+      <p>This position may have been removed or the link is invalid.</p>
+      <a href="index.html" class="btn-primary" style="margin-top: 15px"
+        >Return to Jobs</a
+      >
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Edo State Government ICT Internship Scheme.</p>
+    </footer>
+
+    <script src="js/jobs-data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/details.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Jobs - EdoState Jobs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">EdoState<span>Jobs</span></div>
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links" id="mainNavLinks">
+        <a href="home.html">Home</a>
+        <a href="index.html" class="active">Find Jobs</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="admin-login.html" class="admin-icon-link" title="Admin Login"
+          ><i class="fas fa-user-cog"></i
+        ></a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Search Internship Opportunities</h1>
+      <p>Find ICT internships across Edo State ICT Agency.</p>
+      <div class="counter-badge">
+        <strong id="jobCounter">0</strong> Active Positions
+      </div>
+      <form
+        class="search-box"
+        onsubmit="
+          event.preventDefault();
+          filterJobs();
+        "
+      >
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by job title or company..."
+          oninput="filterJobs()"
+        />
+        <select id="categoryFilter" onchange="filterJobs()">
+          <option value="">All Categories</option>
+          <option value="Software Development">Software Development</option>
+          <option value="Design">Design</option>
+          <option value="Data & Infrastructure">Data & Infrastructure</option>
+          <option value="Cybersecurity">Cybersecurity</option>
+          <option value="IT Support">IT Support</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <main class="main-content">
+      <h2>Featured Opportunities</h2>
+      <div class="job-grid" id="jobGrid"></div>
+      <div id="noResults" class="no-results" style="display: none">
+        <i class="fas fa-search"></i>
+        <h3>No jobs found</h3>
+        <p>Try adjusting your search or filter criteria.</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Edo State Government ICT Internship Scheme.</p>
+    </footer>
+
+    <script src="js/jobs-data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

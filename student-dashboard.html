@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dashboard - EdoState Jobs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">EdoState<span>Jobs</span></div>
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links" id="mainNavLinks">
+        <a href="home.html">Home</a>
+        <a href="index.html">Find Jobs</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="admin-login.html" class="admin-icon-link" title="Admin Login"
+          ><i class="fas fa-user-cog"></i
+        ></a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div
+        class="form-header"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          flex-wrap: wrap;
+          gap: 15px;
+        "
+      >
+        <div>
+          <h2 id="studentGreeting">Welcome!</h2>
+          <p>Track your internship applications and statuses below.</p>
+        </div>
+        <a href="index.html" class="btn-primary">Browse More Jobs</a>
+      </div>
+
+      <div
+        id="myApplicationsGrid"
+        class="job-grid"
+        style="margin-top: 30px"
+      ></div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Edo State Government ICT Internship Scheme.</p>
+    </footer>
+
+    <script src="js/jobs-data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/student-dash.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login - EdoState Jobs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="admin-login-body">
+    <div class="admin-login-container">
+      <div class="admin-login-card">
+        <div class="admin-login-header">
+          <div class="admin-logo-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h1>Admin Portal</h1>
+          <p>Edo State ICT Agency</p>
+        </div>
+
+        <form
+          id="adminLoginForm"
+          class="application-form"
+          onsubmit="handleAdminLogin(event)"
+        >
+          <div class="form-group full-width">
+            <label>Admin Password</label>
+            <input
+              type="password"
+              id="adminPasswordInput"
+              placeholder="Enter password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-submit" style="width: 100%">
+            <i class="fas fa-lock-open"></i> Login to Dashboard
+          </button>
+          <p class="auth-toggle">
+            <a onclick="showForgotPassword()">Forgot Password?</a>
+          </p>
+          <p class="auth-toggle" style="margin-top: 5px">
+            <a href="home.html">← Back to Public Site</a>
+          </p>
+        </form>
+
+        <form
+          id="forgotPasswordForm"
+          class="application-form"
+          style="display: none"
+          onsubmit="handleForgotPassword(event)"
+        >
+          <div class="form-group full-width">
+            <label id="securityQuestionLabel">Security Question</label>
+            <input
+              type="text"
+              id="securityAnswerInput"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+          <div class="form-group full-width">
+            <label>New Password</label>
+            <input
+              type="password"
+              id="newPasswordInput"
+              placeholder="Choose a new password"
+              required
+              minlength="6"
+            />
+          </div>
+          <button type="submit" class="btn-submit" style="width: 100%">
+            Reset Password
+          </button>
+          <p class="auth-toggle">
+            <a onclick="showLoginForm()">← Back to Login</a>
+          </p>
+        </form>
+
+        <form
+          id="setupSecurityForm"
+          class="application-form"
+          style="display: none"
+          onsubmit="handleSetupSecurity(event)"
+        >
+          <div class="setup-notice">
+            <i class="fas fa-info-circle"></i>
+            <p>
+              First-time login! Please set a security question so you can
+              recover your password later.
+            </p>
+          </div>
+          <div class="form-group full-width">
+            <label>Choose a Security Question</label>
+            <select id="securityQuestionSelect" required>
+              <option value="">-- Select a question --</option>
+              <option value="What is your mother's maiden name?">
+                What is your mother's maiden name?
+              </option>
+              <option value="What was the name of your first school?">
+                What was the name of your first school?
+              </option>
+              <option value="What is your favorite color?">
+                What is your favorite color?
+              </option>
+              <option value="What city were you born in?">
+                What city were you born in?
+              </option>
+              <option value="What is your pet's name?">
+                What is your pet's name?
+              </option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label>Your Answer</label>
+            <input
+              type="text"
+              id="securityAnswerSetup"
+              placeholder="Type your answer"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-submit" style="width: 100%">
+            Save & Continue to Dashboard
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/jobs-data.js"></script>
+    <script src="js/admin-auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edo State ICT Internship Program</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">EdoState<span>Jobs</span></div>
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links" id="mainNavLinks">
+        <a href="home.html" class="active">Home</a>
+        <a href="index.html">Find Jobs</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="admin-login.html" class="admin-icon-link" title="Admin Login"
+          ><i class="fas fa-user-cog"></i
+        ></a>
+      </nav>
+    </header>
+
+    <section class="landing-hero">
+      <div class="hero-content">
+        <div class="hero-badge">Official Government Initiative</div>
+        <h1>Launch Your Tech Career in Edo State</h1>
+        <p>
+          Gain real-world ICT experience, work on impactful public projects, and
+          build your digital portfolio through official government internships.
+        </p>
+        <div class="hero-buttons">
+          <div id="guestCtaHero">
+            <a
+              href="#"
+              onclick="
+                openAuthModal();
+                return false;
+              "
+              class="btn-primary-large"
+              >Create Account <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div id="userCtaHero" style="display: none">
+            <a href="index.html" class="btn-primary-large"
+              >Browse Internships <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <a
+            href="#"
+            class="btn-outline-large"
+            onclick="
+              openQuiz();
+              return false;
+            "
+            >Take Career Quiz</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="stat-item">
+        <h2>50+</h2>
+        <p>Active ICT Roles</p>
+      </div>
+      <div class="stat-item">
+        <h2>12</h2>
+        <p>Partner MDAs</p>
+      </div>
+      <div class="stat-item">
+        <h2>100%</h2>
+        <p>Practical Experience</p>
+      </div>
+    </section>
+
+    <section class="landing-section bg-light">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>
+          Your pathway from student to tech professional in three simple steps.
+        </p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+          <h3>1. Create an Account</h3>
+          <p>Sign up with your student email and build your basic profile.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-search"></i></div>
+          <h3>2. Find Your Fit</h3>
+          <p>Browse open roles or take our career quiz to get matched.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>3. Gain Experience</h3>
+          <p>
+            Work alongside senior government IT professionals on real projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-section">
+      <div class="section-header">
+        <h2>Explore Career Tracks</h2>
+        <p>We offer internships across all major digital disciplines.</p>
+      </div>
+      <div class="category-grid">
+        <a
+          href="index.html?category=Software%20Development"
+          class="category-card"
+        >
+          <i class="fas fa-code"></i>
+          <h3>Software Dev</h3>
+          <p>Frontend, Backend & Mobile</p>
+        </a>
+        <a href="index.html?category=Design" class="category-card">
+          <i class="fas fa-paint-brush"></i>
+          <h3>UI/UX Design</h3>
+          <p>Wireframes & Prototyping</p>
+        </a>
+        <a
+          href="index.html?category=Data%20%26%20Infrastructure"
+          class="category-card"
+        >
+          <i class="fas fa-database"></i>
+          <h3>Data & Cloud</h3>
+          <p>Analytics & Infrastructure</p>
+        </a>
+        <a href="index.html?category=Cybersecurity" class="category-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Cybersecurity</h3>
+          <p>Network & App Security</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2>Ready to start your journey?</h2>
+      <p>Join hundreds of Edo State students already building their futures.</p>
+      <div id="guestCta">
+        <a
+          href="#"
+          onclick="
+            openAuthModal();
+            return false;
+          "
+          class="btn-primary-large"
+          style="background: #fff; color: #004d25"
+          >Create Your Student Account</a
+        >
+      </div>
+      <div id="userCta" style="display: none">
+        <a
+          href="index.html"
+          class="btn-primary-large"
+          style="background: #fff; color: #004d25"
+          >Browse Internships <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+    </section>
+
+    <footer>
+      <div style="margin-bottom: 15px; font-size: 18px; font-weight: bold">
+        EdoState<span style="color: #00e676">Jobs</span>
+      </div>
+      <p>&copy; 2026 Edo State Government ICT Internship Scheme.</p>
+    </footer>
+
+    <div id="quizModal" class="modal-overlay">
+      <div class="modal-content quiz-content">
+        <span class="close-modal" onclick="closeQuiz()">&times;</span>
+        <div id="quizHeader" class="modal-header">
+          <h2>Tech Career Matcher</h2>
+          <p>Answer 3 quick questions to find your perfect ICT internship.</p>
+          <div class="quiz-progress">
+            <div
+              id="quizProgressBar"
+              class="quiz-progress-fill"
+              style="width: 33%"
+            ></div>
+          </div>
+        </div>
+        <div id="quizQuestionContainer">
+          <h3 id="quizQuestionText" class="quiz-question">Loading...</h3>
+          <div id="quizOptions" class="quiz-options"></div>
+        </div>
+        <div id="quizResultContainer" style="display: none; text-align: center">
+          <div class="step-icon" style="margin: 0 auto 15px">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3 style="color: #004d25; margin-bottom: 10px">
+            Your Perfect Match!
+          </h3>
+          <h2 id="quizResultTitle" style="font-size: 28px; margin-bottom: 15px">
+            ...
+          </h2>
+          <p id="quizResultDesc" style="color: #666; margin-bottom: 25px"></p>
+          <button
+            id="btnViewQuizJobs"
+            class="btn-primary-large"
+            style="width: 100%; justify-content: center"
+          >
+            View Recommended Jobs
+          </button>
+          <a
+            href="#"
+            onclick="
+              startQuiz();
+              return false;
+            "
+            style="
+              display: block;
+              margin-top: 15px;
+              color: #666;
+              font-weight: bold;
+              text-decoration: none;
+            "
+            >Take Quiz Again</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jobs-data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/quiz.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        function updateLandingCTA() {
+          const user = JSON.parse(localStorage.getItem("currentUser"));
+          const guestHero = document.getElementById("guestCtaHero");
+          const userHero = document.getElementById("userCtaHero");
+          const guestCta = document.getElementById("guestCta");
+          const userCta = document.getElementById("userCta");
+
+          if (user) {
+            if (guestHero) guestHero.style.display = "none";
+            if (userHero) userHero.style.display = "block";
+            if (guestCta) guestCta.style.display = "none";
+            if (userCta) userCta.style.display = "block";
+          } else {
+            if (guestHero) guestHero.style.display = "block";
+            if (userHero) userHero.style.display = "none";
+            if (guestCta) guestCta.style.display = "block";
+            if (userCta) userCta.style.display = "none";
+          }
+        }
+
+        updateLandingCTA();
+
+        const originalLoginUser = window.loginUser;
+        window.loginUser = function (user) {
+          originalLoginUser(user);
+          updateLandingCTA();
+        };
+
+        const originalLogoutUser = window.logoutUser;
+        window.logoutUser = function () {
+          originalLogoutUser();
+          updateLandingCTA();
+        };
+      });
+    </script>
+  </body>
+</html>

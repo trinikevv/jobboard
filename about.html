@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - EdoState Jobs</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">EdoState<span>Jobs</span></div>
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links" id="mainNavLinks">
+        <a href="home.html">Home</a>
+        <a href="index.html">Find Jobs</a>
+        <a href="about.html" class="active">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="admin-login.html" class="admin-icon-link" title="Admin Login"
+          ><i class="fas fa-user-cog"></i
+        ></a>
+      </nav>
+    </header>
+
+    <div class="breadcrumb-container">
+      <a href="home.html" class="back-link"
+        ><i class="fas fa-arrow-left"></i> Back to Home</a
+      >
+    </div>
+
+    <main class="main-content">
+      <div class="form-wrapper" style="max-width: 900px; padding: 50px">
+        <div style="text-align: center; margin-bottom: 40px">
+          <div
+            style="
+              width: 80px;
+              height: 80px;
+              background: #e8f5e9;
+              color: #004d25;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 32px;
+              margin: 0 auto 20px;
+            "
+          >
+            <i class="fas fa-building"></i>
+          </div>
+          <h1 style="color: #004d25; font-size: 32px; margin-bottom: 10px">
+            Edo State ICT Agency
+          </h1>
+          <p style="color: #666; font-size: 16px">
+            Building the next generation of digital leaders in Nigeria.
+          </p>
+        </div>
+
+        <h3 style="color: #111; margin-bottom: 15px; font-size: 22px">
+          Our Mission
+        </h3>
+        <p style="color: #555; line-height: 1.8; margin-bottom: 30px">
+          The Edo State ICT Internship Scheme is an official government
+          initiative designed to bridge the gap between academic learning and
+          real-world technology application. Our program places driven students
+          and recent graduates directly into active government digital projects.
+        </p>
+
+        <h3 style="color: #111; margin-bottom: 15px; font-size: 22px">
+          What Interns Do
+        </h3>
+        <p style="color: #555; line-height: 1.8; margin-bottom: 30px">
+          Interns contribute to real work: writing code for citizen portals,
+          designing interfaces, securing state network infrastructure, and
+          analyzing data that drives policy decisions.
+        </p>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+          "
+        >
+          <div
+            style="
+              background: #f9fbf9;
+              padding: 20px;
+              border-radius: 8px;
+              border-left: 3px solid #00e676;
+            "
+          >
+            <h4 style="margin-bottom: 5px; color: #004d25">Mentorship</h4>
+            <p style="font-size: 13px; color: #666">
+              Guidance from experienced tech professionals.
+            </p>
+          </div>
+          <div
+            style="
+              background: #f9fbf9;
+              padding: 20px;
+              border-radius: 8px;
+              border-left: 3px solid #00e676;
+            "
+          >
+            <h4 style="margin-bottom: 5px; color: #004d25">Certification</h4>
+            <p style="font-size: 13px; color: #666">
+              Official certificate upon successful completion.
+            </p>
+          </div>
+          <div
+            style="
+              background: #f9fbf9;
+              padding: 20px;
+              border-radius: 8px;
+              border-left: 3px solid #00e676;
+            "
+          >
+            <h4 style="margin-bottom: 5px; color: #004d25">Stipend</h4>
+            <p style="font-size: 13px; color: #666">
+              Competitive monthly stipend support.
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+          "
+        >
+          <p style="margin-bottom: 15px; color: #333; font-weight: bold">
+            Ready to join us?
+          </p>
+          <a href="index.html" class="btn-primary">View Open Internships</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Edo State Government ICT Internship Scheme.</p>
+    </footer>
+
+    <script src="js/jobs-data.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
